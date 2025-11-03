@@ -14,7 +14,7 @@ Plus two (that I remember) extras enabled:
 *Name*: Sigen Plant Battery Usable Capacity    (for entity_id sensor.sigen_plant_battery_usable_capacity)  
 *State*:
 ```yaml
-{{ (states('sensor.sigen_plant_battery_state_of_charge')|float(0) / 100 * states('sensor.sigen_inverter_rated_battery_capacity')|float(0))|round(2) }}
+{{ (states('sensor.sigen_plant_battery_state_of_charge')|float(0) / 100 * states('sensor.sigen_plant_rated_energy_capacity')|float(0))|round(2) }}
 ```  
 *Unit*: kWh  
 *Device Class*: Energy  
